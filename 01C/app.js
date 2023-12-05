@@ -6,10 +6,10 @@ class App {
         this.appNaam = "demoApp"; 
         this.versienummer = 0.1; 
         this.versiedatum = new Date("2023-11-23"); 
-        this.auteur = "Sydney Cairo"; 
-        this.copyright = "Sydney BV"; 
+        this.auteur = "Desley Puttileihalat"; 
+        this.copyright = "Desley BV"; 
         this.distributeur = "Leerling soft"; 
-        this.darkmode = false; 
+        this.darkmode = false;
  
  
         let isBoolean = true; 
@@ -46,4 +46,4 @@ console.log("versiedatum " + app.versiedatum);
 console.log("auteur " + app.auteur);
 console.log("copyright " + app.copyright);
 console.log("distributeur " + app.distributeur);
-console.log("darkmode " + darkmode);
+console.log("darkmode " + app.darkmode);
