@@ -25,24 +25,8 @@ class App
             console.log("Copyright:", copyright);
             console.log("Distributeur:", distributeur);
             console.log("Dark Mode:", darkmode);
-
-            class MyClass {
-                constructor() {
-                   
-                    this.classBoolean = false;
-                    this.classString = "Dit is een class string";
-                    this.classNumber = 100;
-                }
-            }
-            
-           
-            const myInstance = new MyClass();
-            console.log(myInstance.classBoolean);
-            console.log(myInstance.classString);
-            console.log(myInstance.classNumber);
     }
 }
-
 let app = new App();
 app.runApplication();
 
