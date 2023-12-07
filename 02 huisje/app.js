@@ -5,7 +5,7 @@ class App {
         console.log(canvas);
     
         let g = canvas.getContext("2d");
-        g.fillStyle = "white";
+        g.fillStyle = "#ff0000";
         g.fillRect(0,0,canvas.width,canvas.height);
         
         g.fillStyle = "#000000";
