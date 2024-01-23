@@ -64,10 +64,42 @@ class App {
         argumentsAreHandy("Super shout out");
         argumentsAreHandy("Super shout out");
         argumentsAreHandy("Super shout out");
-    }
-}
+
+        printMario() 
+            console.log("MARIO!!"); 
+          }
+        
+          getBowser() {
+            return "BWAHAHA!!!";
+          }
+        
+          addNumbers(num1, num2) {
+            return num1 + num2;
+          } 
+          
+          runApplication() {
+            this.printMario();
+            
+            let bowser = this.getBowser();
+            console.log(bowser);
+            
+            let sum = this.addNumbers(5, 10);
+            console.log(sum);
+          }
+
+        
+        }
 
 let app = new App();
+
+app.printMario(); 
+
+let bowser = app.getBowser();
+console.log(bowser);
+
+let sum = app.addNumbers(5, 10);
+console.log(sum);
+
 app.runApplication();
 
 
