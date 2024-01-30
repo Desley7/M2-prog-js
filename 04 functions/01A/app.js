@@ -1,106 +1,91 @@
+function heeftEenResultaat() {
+    let resultaat = 1
+    return resultaat
+}
+ 
+let hetResultaat = heeftEenResultaat()
+console.log(hetResultaat)
+console.log(heeftEenResultaat())
+ 
+function argumentsAreHandy(shoutout) {
+    console.log("do you want to give a shoutout?")
+    console.log(shoutout)
+}
+ 
+function ax2bcWiskunde(x, a, b, c) {
+    let y = (a * (x * x)) + (b * x) + c
+    return y
+}
+ 
+let y1 = ax2bcWiskunde(9, 3, 4, 89)
+console.log(y1)
+ 
+let y2 = ax2bcWiskunde(3, 6, 5, 45)
+console.log(y2)
+ 
+let y3 = ax2bcWiskunde(7, 1, 2, 13)
+console.log(y3)
+ 
+function jaidkWatDitIs(u, h, l) {
+    let logY = Math.log(l) + h + Math.pow(u, 2)
+    console.log(logY)
+}
+ 
+jaidkWatDitIs(9, 8, 15)
+ 
+argumentsAreHandy("Super shout out")
+argumentsAreHandy("iets anders")
+argumentsAreHandy("ja dit is tekst")
+ 
+function superMooieGlobalFunction() {
+    console.log("ik ben global")
+    console.log("dus je mag mij overal aanroepen")
+}
+superMooieGlobalFunction()
+superMooieGlobalFunction()
+superMooieGlobalFunction()
+ 
 class App {
     runApplication() {
         console.log("hello world!")
-        let canvas = document.getElementById("canvasId")
-        let g = canvas.getContext("2d");
-        this.tekenHuis(g, 10, 10)
-        this.tekenHuis(g, 75, 50)
-        this.tekenHuis(g, 120, 120)
-        this.tekenKerstboom(g, 300, 300)
+        superMooieGlobalFunction()
     }
  
-    tekenHuis(g, x, y) {
-        g.beginPath()
-        g.moveTo(30 + x, 10 + y)
-        g.fillStyle = "red"
-        g.lineTo(70 + x, 20 + y)
-        g.lineTo(60 + x, 40 + y)
-        g.lineTo(20 + x, 30 + y)
-        g.closePath()
-        g.fill()
-        g.stroke()
- 
-        g.beginPath()
-        g.fillStyle = "#CCCCCC"
-        g.lineTo(20 + x, 50 + y)
-        g.lineTo(60 + x, 60 + y)
-        g.lineTo(60 + x, 40 + y)
-        g.lineTo(20 + x, 30 + y)
-        g.closePath()
-        g.fill()
-        g.stroke()
- 
-        g.beginPath()
-        g.fillStyle = "#999999"
-        g.moveTo(60 + x, 40 + y)
-        g.lineTo(70 + x, 20 + y)
-        g.lineTo(80 + x, 30 + y)
-        g.closePath()
-        g.fill()
-        g.stroke()
- 
-        g.beginPath()
-        g.lineTo(60 + x, 40 + y)
-        g.lineTo(60 + x, 60 + y)
-        g.lineTo(80 + x, 50 + y)
-        g.lineTo(80 + x, 30 + y)
-        g.fill()
-        g.stroke()
- 
-        g.beginPath()
-        g.fillStyle = "#63C5F8"
-        g.moveTo(30 + x, 40 + y)
-        g.lineTo(50 + x, 45 + y)
-        g.lineTo(50 + x, 50 + y)
-        g.lineTo(30 + x, 45 + y)
-        g.closePath()
-        g.fill()
+    newClassFunction() {
+        console.log("hello world in de nieuwClassFunction")
     }
  
-    tekenKerstboom(g, x, y) {
-        //stam
-        g.fillStyle = "#4d3808"
-        g.beginPath()
-        g.moveTo(x, y)
-        g.lineTo(x + 50, y)
-        g.lineTo(x + 50, y + 50)
-        g.lineTo(x, y + 50)
-        g.closePath()
-        g.fill()
-        g.stroke()
- 
-        //body
-        g.fillStyle = "#2db81d"
-        g.beginPath()
-        g.lineTo(x - 50, y)
-        g.lineTo(x + 100, y)
-        g.lineTo(x + 25, y - 200)
-        g.closePath()
-        g.fill()
-        g.stroke()
- 
-        let xBallen = x
-        let yBallen = y
-        for (let i = 0; i < 8; i++) {
-            this.tekenBal(g, xBallen, yBallen)
-            xBallen += 10
-            yBallen += 20
-            if (xBallen >= x + 20) {
-                xBallen = x
-            }
- 
-        }
+    anotherFunctionWithArguments(aArgument) {
+        console.log("kom maar met je argument")
+        console.log("hier:")
+        console.log(aArgument)
     }
  
-    tekenBal(g, x, y) {
-        g.fillStyle = "#aa5dd4"
-        g.beginPath()
-        g.arc(x + 20, y - 150, 10, 0, Math.PI * 2)
-        g.closePath()
-        g.fill()
-        g.stroke()
+    mario() {
+        console.log("MARIO!!")
+    }
+ 
+    bwahaha() {
+        return "BWAHAHA!!!"
+    }
+ 
+    optellen(getal1, getal2) {
+        return getal1 + getal2
+    }
+ 
+    aftrekken(getal1, getal2) {
+        return getal1 - getal2
     }
 }
  
 let app = new App();
 app.runApplication();
+app.newClassFunction();
+app.anotherFunctionWithArguments("mijn argument is iets...");
+app.mario()
+let bwahaha = app.bwahaha()
+console.log(bwahaha)
+let optellenResultaat = app.optellen(1, 2)
+console.log(optellenResultaat)
+let aftrekkenResultaat = app.aftrekken(10, 5)
+console.log(aftrekkenResultaat)
